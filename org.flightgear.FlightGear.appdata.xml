@@ -6,6 +6,8 @@ SentUpstream: 2014-09-17
 -->
 <component type="desktop">
   <id>org.flightgear.FlightGear.desktop</id>
+  <name>FlightGear Flight Simulator</name>
+  <summary>A free and highly sophisticated flight simulator</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
