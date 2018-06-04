@@ -8,6 +8,8 @@ SentUpstream: 2014-09-17
   <id>org.flightgear.FlightGear.desktop</id>
   <name>FlightGear</name>
   <summary>A free and highly sophisticated flight simulator</summary>
+  <summary xml:lang="pt_BR">Um simulador de voo gratuito e altamente sofisticado</summary>
+  <summary xml:lang="es">Un simulador de vuelo gratuito y altamente sofisticado</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <description>
     <p>
@@ -23,9 +25,24 @@ SentUpstream: 2014-09-17
       airport buildings on many of the larger, international airports.
     </p>
     <p>
-      Most popular flight control hardware, such as yokes and sticks are     supported. Multiple monitor setup and multiplayer is also featured.
+      Most popular flight control hardware, such as yokes and sticks are supported. Multiple monitor setup and multiplayer is also featured.
     </p>
   </description>
+  <description xml:lang="pt_BR"><p>FlightGear permite controlar mais de 400 aeronaves, pequenas e grandes em diversas situações, tipos de clima, estações do ano, ciclo diurno e noturno. Isso inclui aeronaves a hélice monomotor, grandes navios de passageiros de 4 motores, aeronaves experimentais, aeronaves clássicas e antigas e helicópteros.
+    </p>
+    <p>
+   A paisagem do FlightGear cobre o mundo inteiro e é baixada enquanto você voa. Visite qualquer um dos 20.000 aeroportos com uma representação precisa dos edifícios do aeroporto em muitos dos maiores aeroportos internacionais.
+    <p>
+      Mais popular hardware de controle de vôo, tais como yokes e sticks são suportados. Vários monitores de configuração e multiplayer também é destaque.
+    </p>
+  <description xml:lang="es"><p>FlightGear permite controlar más de 400 aeronaves, pequeñas y grandes en diversas situaciones, tipos de clima, estaciones del año, ciclo diurno y nocturno. Esto incluye aviones a hélice monomotor, grandes buques de pasajeros de 4 motores, aeronaves experimentales, aeronaves clásicas y antiguas y helicópteros.
+    </p>
+    <p>
+   El paisaje de FlightGear cubre el mundo entero y se descarga mientras vuela. Visite cualquiera de los 20.000 aeropuertos con una representación precisa de los edificios del aeropuerto en muchos de los mayores aeropuertos internacionales.
+    <p>
+      Más populares hardware de control de vuelo, como yokes y sticks son compatibles. Varios monitores de configuración y multijugador también se destaca.
+    </p>
+    </description>
   <url type="homepage">http://www.flightgear.org/</url>
   <screenshots>
     <screenshot type="default">
