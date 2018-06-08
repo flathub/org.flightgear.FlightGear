@@ -11,9 +11,7 @@ SentUpstream: 2014-09-17
   <summary xml:lang="pt_BR">Um simulador de voo gratuito e altamente sofisticado</summary>
   <summary xml:lang="es">Un simulador de vuelo gratuito y altamente sofisticado</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <description>
-    <p>
-      FlightGear allows you to control over 400 aircraft, small and large in arange of situations, types of weather, seasons, day and night cycle.This includes single-engine propeller aircraft, large 4-engine passengerliners, experimental aircraft, classic and vintage aircraft andhelicopters.
+  <description><p>FlightGear allows you to control over 400 aircraft, small and large in arange of situations, types of weather, seasons, day and night cycle.This includes single-engine propeller aircraft, large 4-engine passengerliners, experimental aircraft, classic and vintage aircraft andhelicopters.
     </p>
     <p>
       The FlightGear landscape covers the entire world and is downloaded as youfly. Visit any of the 20,000 airports with an accurate representation ofairport buildings on many of the larger, international airports.
@@ -29,6 +27,7 @@ SentUpstream: 2014-09-17
     <p>
       Mais popular hardware de controle de vôo, tais como yokes e sticks são suportados. Vários monitores de configuração e multiplayer também é destaque.
     </p>
+  </description>
   <description xml:lang="es"><p>FlightGear permite controlar más de 400 aeronaves, pequeñas y grandes en diversas situaciones, tipos de clima, estaciones del año, ciclo diurno y nocturno. Esto incluye aviones a hélice monomotor, grandes buques de pasajeros de 4 motores, aeronaves experimentales, aeronaves clásicas y antiguas y helicópteros.
     </p>
     <p>
@@ -36,6 +35,7 @@ SentUpstream: 2014-09-17
     <p>
       Más populares hardware de control de vuelo, como yokes y sticks son compatibles. Varios monitores de configuración y multijugador también se destaca.
     </p>
+  </description>
   <url type="homepage">http://www.flightgear.org/</url>
   <screenshots>
     <screenshot type="default">
