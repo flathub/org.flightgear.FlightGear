@@ -5,7 +5,7 @@ BugReportURL: https://sourceforge.net/p/fgrun/support-requests/9/
 SentUpstream: 2014-09-17
 -->
 <component type="desktop">
-	<id>org.flightgear.FlightGear.desktop</id>
+	<id>org.flightgear.FlightGear</id>
 	<name>FlightGear</name>
 	<summary>A free and highly sophisticated flight simulator</summary>
 	<summary xml:lang="pt_BR">Um simulador de voo gratuito e altamente sofisticado</summary>
@@ -74,17 +74,8 @@ SentUpstream: 2014-09-17
 	<url type="help">http://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
 	<url type="translate">http://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
-		<release date="2018-05-22" version="2018.2" />
-		<release date="2017-04-07" version="2018.1" />
-		<release date="2017-09-20" version="2017.3" />
-		<release date="2017-05-25" version="2017.2" />
-		<release date="2017-05-21" version="2017.1" />
-		<release date="2016-12-28" version="2016.4" />
-		<release date="2016-09-08" version="2016.3" />
-		<release date="2016-05-21" version="2016.2" />
-		<release date="2016-05-07" version="2016.1" />
+		<release date="2018-06-03" version="2018.2.2" />
 	</releases>
 	<!--FIXME: this is optional, but recommended-->
 	<update_contact />
-	<launchable type="desktop-id">org.flightgear.FlightGear.desktop</launchable>
 </component>

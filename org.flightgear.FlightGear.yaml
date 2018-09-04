@@ -36,9 +36,9 @@ modules:
   - ./b2 install
   sources:
   sources:
-  - sha256: 2684c972994ee57fc5632e03bf044746f6eb45d4920c343937a465fd67a5adba
-    type: archive
-    url: https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.tar.bz2
+  - type: archive
+    url: https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2
+    sha256: 7f6130bc3cf65f56a618888ce9d5ea704fa10b462be126ad053e80e553d6d8b7
   cleanup:
   - /include
   
@@ -49,8 +49,8 @@ modules:
   - --enable-osmesa
   sources:
   - type: archive
-    url: https://mesa.freedesktop.org/archive/mesa-18.1.1.tar.xz
-    sha256: d3312a2ede5aac14a47476b208b8e3a401367838330197c4588ab8ad420d7781
+    url: https://mesa.freedesktop.org/archive/mesa-18.1.7.tar.xz
+    sha256: 655e3b32ce3bdddd5e6e8768596e5d4bdef82d0dd37067c324cc4b2daa207306
 
 - name: ffmpeg
   config-opts:
@@ -61,8 +61,8 @@ modules:
   - --enable-demuxer=bink,mp3,ogg,pcm_s16le,wav
   sources:
   - type: archive
-    url: http://ffmpeg.org/releases/ffmpeg-2.8.14.tar.xz
-    sha256: ef061d9a6cdde8628d00613d17b467fb5ad75e7404ef523dc842e192c511a116
+    url: http://ffmpeg.org/releases/ffmpeg-4.0.2.tar.xz
+    sha256: a95c0cc9eb990e94031d2183f2e6e444cc61c99f6f182d1575c433d62afb2f97
     
 - name: openscenegraph
   buildsystem: cmake-ninja
@@ -70,8 +70,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.2.1.tar.gz
-    sha256: 2083b632b764438727e07289845992d41757582e571e3133ca259a6514cf72b2
+    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.4.1.tar.gz
+    sha256: 930eb46f05781a76883ec16c5f49cfb29a059421db131005d75bec4d78401fd5
   - type: shell
     commands:
     - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
@@ -83,8 +83,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/simgear-2018.2.1.tar.bz2
-    sha256: 3e2788bc1ce03fc4ca69f41d1546c28fc9502756ae773831ad6e42c4db34f535
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/simgear-2018.2.2.tar.bz2
+    sha256: f61576bc36aae36f350154749df1cee396763604c06b8a71c4b50452d9151ce5
     
 - name: xmu
   sources:
@@ -102,8 +102,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/FlightGear-2018.2.1-data.tar.bz2
-    sha256: 3d5dbf9b584b135699aadff0f51017fac37aefd1157e00adbba1d4855a1b24e9
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/FlightGear-2018.2.2-data.tar.bz2
+    sha256: c89b94e4cf3cb7eda728daf6cca6dd051f7a47863776c99fd2f3fe0054400ac4
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
@@ -118,8 +118,8 @@ modules:
   builddir: true
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/flightgear-2018.2.1.tar.bz2
-    sha256: 592ad56ee434f004c78fcfa7caa17666841429705547ab6eb947058fc09e45a2
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/flightgear-2018.2.2.tar.bz2
+    sha256: 61f809ef0a3f6908d156f0c483ed5313d31b5a6ac74761955d0b266751718147
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: file
