@@ -1,13 +1,14 @@
 id: org.flightgear.FlightGear
 runtime: org.kde.Platform
-runtime-version: 5.11
+runtime-version: '5.11'
 sdk: org.kde.Sdk
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
 - --socket=wayland
-- --share=ipc
+- --socket=fallback-x11
 - --socket=x11
+- --share=ipc
 - --device=dri
 - --socket=pulseaudio
 - --share=network
