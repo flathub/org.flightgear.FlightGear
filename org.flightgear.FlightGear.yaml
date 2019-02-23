@@ -1,6 +1,6 @@
 id: org.flightgear.FlightGear
 runtime: org.kde.Platform
-runtime-version: '5.11'
+runtime-version: '5.12'
 sdk: org.kde.Sdk
 command: flightgear.sh
 rename-icon: flightgear
@@ -13,9 +13,6 @@ finish-args:
 - --socket=pulseaudio
 - --share=network
 - --persist=~/.fgfs/
-build-options:
-  cflags: -O2
-  cxxflags: -O2
 cleanup:
 - /include
 - /lib/pkgconfig
@@ -38,8 +35,8 @@ modules:
   sources:
   sources:
   - type: archive
-    url: https://dl.bintray.com/boostorg/release/1.68.0/source/boost_1_68_0.tar.bz2
-    sha256: 7f6130bc3cf65f56a618888ce9d5ea704fa10b462be126ad053e80e553d6d8b7
+    url: https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2
+    sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
   cleanup:
   - /include
   
@@ -50,8 +47,8 @@ modules:
   - --enable-osmesa
   sources:
   - type: archive
-    url: https://mesa.freedesktop.org/archive/mesa-18.1.7.tar.xz
-    sha256: 655e3b32ce3bdddd5e6e8768596e5d4bdef82d0dd37067c324cc4b2daa207306
+    url: https://mesa.freedesktop.org/archive/mesa-18.3.4.tar.xz
+    sha256: 32314da4365d37f80d84f599bd9625b00161c273c39600ba63b45002d500bb07
 
 - name: ffmpeg
   config-opts:
@@ -62,8 +59,8 @@ modules:
   - --enable-demuxer=bink,mp3,ogg,pcm_s16le,wav
   sources:
   - type: archive
-    url: http://ffmpeg.org/releases/ffmpeg-4.0.2.tar.xz
-    sha256: a95c0cc9eb990e94031d2183f2e6e444cc61c99f6f182d1575c433d62afb2f97
+    url: https://ffmpeg.org/releases/ffmpeg-4.1.tar.bz2
+    sha256: b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5
     
 - name: openscenegraph
   buildsystem: cmake-ninja
@@ -71,8 +68,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.4.1.tar.gz
-    sha256: 930eb46f05781a76883ec16c5f49cfb29a059421db131005d75bec4d78401fd5
+    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.3.tar.gz
+    sha256: 51bbc79aa73ca602cd1518e4e25bd71d41a10abd296e18093a8acfebd3c62696
   - type: shell
     commands:
     - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
@@ -84,8 +81,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/simgear-2018.2.2.tar.bz2
-    sha256: f61576bc36aae36f350154749df1cee396763604c06b8a71c4b50452d9151ce5
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/simgear-2018.3.2.tar.bz2
+    sha256: c8b094a8c5045362848781f72117dbec424472bf6b9dd135dfe43f9b915781a4
     
 - name: xmu
   sources:
@@ -103,8 +100,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/FlightGear-2018.2.2-data.tar.bz2
-    sha256: c89b94e4cf3cb7eda728daf6cca6dd051f7a47863776c99fd2f3fe0054400ac4
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/FlightGear-2018.3.2-data.tar.bz2
+    sha256: 277e817a39edb917976441a808b750ee64be38e077897d0d77c55dfc8eba9640
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
@@ -119,8 +116,8 @@ modules:
   builddir: true
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.2/flightgear-2018.2.2.tar.bz2
-    sha256: 61f809ef0a3f6908d156f0c483ed5313d31b5a6ac74761955d0b266751718147
+    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/flightgear-2018.3.2.tar.bz2
+    sha256: 5acbd008a31119877fefbdfae912ae8495f716288731c91add487fc98828fe53
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: file
