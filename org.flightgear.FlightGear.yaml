@@ -76,13 +76,17 @@ modules:
     - sed 's|DGifCloseFile(giffile)|DGifCloseFile(giffile,0)|' -i src/osgPlugins/gif/ReaderWriterGIF.cpp
     
 - name: simgear
+  builddir: true
   buildsystem: cmake-ninja
   config-opts:
-  - -DCMAKE_BUILD_TYPE=Release
+  - -DCMAKE_BUILD_TYPE=ReleaseWithDebInfo
+  - -DOpenGL_GL_PREFERENCE=GLVND
   sources:
   - type: archive
     url: https://sourceforge.net/projects/flightgear/files/release-2018.3/simgear-2018.3.2.tar.bz2
     sha256: c8b094a8c5045362848781f72117dbec424472bf6b9dd135dfe43f9b915781a4
+  - type: patch
+    path: boost-1.69.patch
     
 - name: xmu
   sources:
@@ -107,12 +111,15 @@ modules:
   - mkdir --parents /app/share/flightgear
   - mv fgdata/* /app/share/flightgear/
     
+- shared-modules/udev/udev-175.json
+ 
 - name: flightgear
   buildsystem: cmake-ninja
   config-opts:
   - -DENABLE_QT=ON
   - -DCMAKE_BUILD_TYPE=Release
   - -DFG_BUILD_TYPE=Release
+  - -DOpenGL_GL_PREFERENCE=GLVND
   builddir: true
   sources:
   - type: archive
