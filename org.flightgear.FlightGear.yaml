@@ -68,8 +68,8 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.3.tar.gz
-    sha256: 51bbc79aa73ca602cd1518e4e25bd71d41a10abd296e18093a8acfebd3c62696
+    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.4.1.tar.gz
+    sha256: 930eb46f05781a76883ec16c5f49cfb29a059421db131005d75bec4d78401fd5
   - type: shell
     commands:
     - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
