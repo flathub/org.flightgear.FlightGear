@@ -12,7 +12,7 @@ finish-args:
 - --device=all
 - --socket=pulseaudio
 - --share=network
-- --persist=~/.fgfs/
+- --persist=.fgfs
 cleanup:
 - /include
 - /lib/pkgconfig
