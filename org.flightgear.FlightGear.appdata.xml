@@ -10,6 +10,7 @@ SentUpstream: 2014-09-17
 	<summary>A free and highly sophisticated flight simulator</summary>
 	<summary xml:lang="pt_BR">Um simulador de voo gratuito e altamente sofisticado</summary>
 	<summary xml:lang="es">Un simulador de vuelo gratuito y altamente sofisticado</summary>
+	<summary xml:lang="it">Un simulatore di volo gratuito e altamente sofisticato</summary>
 	<metadata_license>CC0-1.0</metadata_license>
 	<description>
 		<p>FlightGear allows you to control over 400 aircraft, small and large in a range of situations, types of weather, seasons, day and night cycle. This includes single-engine propeller aircraft, large 4-engine passenger liners, experimental aircraft, classic and vintage aircraft and helicopters.</p>
@@ -25,6 +26,11 @@ SentUpstream: 2014-09-17
 		<p>FlightGear permite controlar más de 400 aeronaves, pequeñas y grandes en diversas situaciones, tipos de clima, estaciones del año, ciclo diurno y nocturno. Esto incluye aviones a hélice monomotor, grandes buques de pasajeros de 4 motores, aeronaves experimentales, aeronaves clásicas y antiguas y helicópteros.</p>
 		<p>El paisaje de FlightGear cubre el mundo entero y se descarga mientras vuela. Visite cualquiera de los 20.000 aeropuertos con una representación precisa de los edificios del aeropuerto en muchos de los mayores aeropuertos internacionales.</p>
 		<p>Más populares hardware de control de vuelo, como yokes y sticks son compatibles. Varios monitores de configuración y multijugador también se destaca.</p>
+        </description>
+	<description xml:lang="it">
+		<p>FlightGear permette di controllare più di 400 velivoli, piccoli e grandi in diverse situazioni, tipo di meteo, stagioni, ciclo diurno e notturno. Questo include velivoli ad elica monomotore, velivoli ad elica monomotore, grandi navi passeggeri a 4 motori, velivoli sperimentali, velivoli ed elicotteri classici e vintage.</p>
+		<p>Il paesaggio di FlightGear copre tutto il mondo e viene scaricato mentre voli. Visita uno qualsiasi dei 20.000 aeroporti con una rappresentazione accurata degli edifici aeroportuali su molti dei più grandi aeroporti internazionali.</p>
+		<p>Sono supportati i più diffusi hardware di controllo del volo, come gioghi e levette. Sono presenti anche impostazioni per monitor multipli e multiplayer.</p>
 	</description>
 	<url type="homepage">http://www.flightgear.org/</url>
 	<screenshots>
@@ -48,6 +54,7 @@ SentUpstream: 2014-09-17
 	<url type="help">http://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
 	<url type="translate">http://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
+		<release date="2020-05-26" version="2020.1.3" />
 		<release date="2019-01-29" version="2018.3.2" />
 	</releases>
 	<!--FIXME: this is optional, but recommended-->

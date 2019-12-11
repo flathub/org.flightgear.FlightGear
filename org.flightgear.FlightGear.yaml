@@ -1,7 +1,17 @@
 id: org.flightgear.FlightGear
 runtime: org.kde.Platform
-runtime-version: '5.12'
+# When updating this version number, care must be taken to update the ffmpeg extension
+# version as well, by checking which version of the freedesktop-sdk this KDE runtime depends on.
+runtime-version: '5.14'
 sdk: org.kde.Sdk
+# ffmpeg might be used by libflite, the audio-synthesis library used by flightgear and provided by the KDE runtime.
+# As of https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/ec8fab8796126c8e3fbeaa9ed8d78ebfd12d2198,
+# the KDE runtime lets application depend on the ffmpeg runtime if needed (for libflite)
+add-extensions:
+- org.freedesktop.Platform.ffmpeg-full:
+  - directory: lib/ffmpeg
+  - version: 19.08
+  - add-ld-path: .
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
@@ -25,7 +35,6 @@ cleanup:
 - /lib64/pkgconfig
 - /lib/cmake
 - /share/doc
-- /share/ffmpeg
 - /share/man
 - "*.h"
 - "*.a"
@@ -36,19 +45,15 @@ modules:
   buildsystem: simple
   build-commands:
   - ./bootstrap.sh --prefix=/app
-  - ./b2 headers
-  - ./b2 install
-  sources:
+  - ./b2 headers -j $FLATPAK_BUILDER_N_JOBS
+  - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
   sources:
   - type: archive
-    url: https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.bz2
-    sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
-  cleanup:
-  - /include
+    url: https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2
+    sha256: 4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402
 
-- shared-modules/glu/glu-9.0.0.json
+- shared-modules/glu/glu-9.json
 - shared-modules/glew/glew.json
-
 
 - name: freeglut
   buildsystem: cmake
@@ -61,34 +66,14 @@ modules:
     url: https://sourceforge.net/projects/freeglut/files/freeglut/3.2.1/freeglut-3.2.1.tar.gz
     sha256: d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68
 
-- name: mesa
-  config-opts:
-  - --enable-osmesa
-  sources:
-  - type: archive
-    url: https://mesa.freedesktop.org/archive/mesa-18.3.4.tar.xz
-    sha256: 32314da4365d37f80d84f599bd9625b00161c273c39600ba63b45002d500bb07
-
-- name: ffmpeg
-  config-opts:
-  - --disable-everything
-  - --enable-shared
-  # Enough to run the base game, might need extending for mod content
-  - --enable-decoder=bink,binkaudio_rdft,mp3,pcm_s16le,vorbis
-  - --enable-demuxer=bink,mp3,ogg,pcm_s16le,wav
-  sources:
-  - type: archive
-    url: https://ffmpeg.org/releases/ffmpeg-4.1.tar.bz2
-    sha256: b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5
-
 - name: openscenegraph
   buildsystem: cmake-ninja
   config-opts:
   - -DCMAKE_BUILD_TYPE=Release
   sources:
   - type: archive
-    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.4.1.tar.gz
-    sha256: 930eb46f05781a76883ec16c5f49cfb29a059421db131005d75bec4d78401fd5
+    url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
+    sha256: aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
   - type: shell
     commands:
     - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
@@ -100,37 +85,41 @@ modules:
   config-opts:
   - -DCMAKE_BUILD_TYPE=ReleaseWithDebInfo
   - -DOpenGL_GL_PREFERENCE=GLVND
+  - -DENABLE_TESTS=OFF
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/simgear-2018.3.2.tar.bz2
-    sha256: c8b094a8c5045362848781f72117dbec424472bf6b9dd135dfe43f9b915781a4
-  - type: patch
-    path: boost-1.69.patch
+    url: https://iweb.dl.sourceforge.net/project/flightgear/release-2020.1/simgear-2020.1.3.tar.bz2
+    sha256: 66da2c4f68058f6854206f2dd9c03c9223851ade24a50216e88b4e50598c13d1
 
 - name: xmu
   sources:
   - type: archive
-    url: https://www.x.org/archive//individual/lib/libXmu-1.1.2.tar.bz2
-    sha256: 756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b
+    url: https://www.x.org/archive/individual/lib/libXmu-1.1.3.tar.bz2
+    sha256: 9c343225e7c3dc0904f2122b562278da5fed639b1b5e880d25111561bac5b731
 
 - name: plib
   sources:
   - type: archive
-    url: http://plib.sourceforge.net/dist/plib-1.8.5.tar.gz
+    url: https://plib.sourceforge.net/dist/plib-1.8.5.tar.gz
     sha256: 485b22bf6fdc0da067e34ead5e26f002b76326f6371e2ae006415dea6a380a32
+
+- name: libevent
+  buildsystem: autotools
+  sources:
+  - type: archive
+    url: https://github.com/libevent/libevent/releases/download/release-2.1.12-stable/libevent-2.1.12-stable.tar.gz
+    sha256: 92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb
 
 - name: flightgear-data
   buildsystem: simple
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/FlightGear-2018.3.2-data.tar.bz2
-    sha256: 277e817a39edb917976441a808b750ee64be38e077897d0d77c55dfc8eba9640
+    url: https://iweb.dl.sourceforge.net/project/flightgear/release-2020.1/FlightGear-2020.1.3-data.tar.bz2
+    sha256: 2196f4ffcdeaae3a8b0a2b6ebf62a456bfd0198abb6c0619f763204d89804a03
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
   - mv fgdata/* /app/share/flightgear/
-
-- shared-modules/udev/udev-175.json
 
 - name: flightgear
   buildsystem: cmake
@@ -139,11 +128,15 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   - -DFG_BUILD_TYPE=Release
   - -DOpenGL_GL_PREFERENCE=GLVND
+  # Set the path to the base data, as it can't find translations and such otherwise
+  - -DFG_DATA_DIR=/app/share/flightgear
+  # Let flightgear build flite, as at least we know it'll work
+  - -DSYSTEM_FLITE=0
   builddir: true
   sources:
   - type: archive
-    url: https://sourceforge.net/projects/flightgear/files/release-2018.3/flightgear-2018.3.2.tar.bz2
-    sha256: 5acbd008a31119877fefbdfae912ae8495f716288731c91add487fc98828fe53
+    url: https://iweb.dl.sourceforge.net/project/flightgear/release-2020.1/flightgear-2020.1.3.tar.bz2
+    sha256: 1f07e8ef2c558dae3b9738e313b57e711d38e569f85d49fc2c5ae647e3949a17
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: script
