@@ -39,8 +39,9 @@ modules:
     sha256: 8f32d4617390d1c2d16f26a27ab60d97807b35440d45891fa340fc2648b04406
   cleanup:
   - /include
-  
+
 - shared-modules/glu/glu-9.0.0.json
+- shared-modules/glew/glew.json
 
 - name: mesa
   config-opts:
@@ -54,14 +55,14 @@ modules:
   config-opts:
   - --disable-everything
   - --enable-shared
-  # Enough to run the base game, might need extending for mod content 
+  # Enough to run the base game, might need extending for mod content
   - --enable-decoder=bink,binkaudio_rdft,mp3,pcm_s16le,vorbis
   - --enable-demuxer=bink,mp3,ogg,pcm_s16le,wav
   sources:
   - type: archive
     url: https://ffmpeg.org/releases/ffmpeg-4.1.tar.bz2
     sha256: b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5
-    
+
 - name: openscenegraph
   buildsystem: cmake-ninja
   config-opts:
@@ -74,7 +75,7 @@ modules:
     commands:
     - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
     - sed 's|DGifCloseFile(giffile)|DGifCloseFile(giffile,0)|' -i src/osgPlugins/gif/ReaderWriterGIF.cpp
-    
+
 - name: simgear
   builddir: true
   buildsystem: cmake-ninja
@@ -87,19 +88,19 @@ modules:
     sha256: c8b094a8c5045362848781f72117dbec424472bf6b9dd135dfe43f9b915781a4
   - type: patch
     path: boost-1.69.patch
-    
+
 - name: xmu
   sources:
   - type: archive
     url: https://www.x.org/archive//individual/lib/libXmu-1.1.2.tar.bz2
     sha256: 756edc7c383254eef8b4e1b733c3bf1dc061b523c9f9833ac7058378b8349d0b
-    
+
 - name: plib
   sources:
   - type: archive
     url: http://plib.sourceforge.net/dist/plib-1.8.5.tar.gz
     sha256: 485b22bf6fdc0da067e34ead5e26f002b76326f6371e2ae006415dea6a380a32
-    
+
 - name: flightgear-data
   buildsystem: simple
   sources:
@@ -110,9 +111,9 @@ modules:
   build-commands:
   - mkdir --parents /app/share/flightgear
   - mv fgdata/* /app/share/flightgear/
-    
+
 - shared-modules/udev/udev-175.json
- 
+
 - name: flightgear
   buildsystem: cmake-ninja
   config-opts:
