@@ -43,6 +43,18 @@ modules:
 - shared-modules/glu/glu-9.0.0.json
 - shared-modules/glew/glew.json
 
+
+- name: freeglut
+  buildsystem: cmake
+  config-opts:
+  - -DCMAKE_BUILD_TYPE=Release
+  - -DFREEGLUT_BUILD_DEMOS=OFF
+  - -DFREEGLUT_BUILD_SHARED_LIBS=ON
+  sources:
+  - type: archive
+    url: https://sourceforge.net/projects/freeglut/files/freeglut/3.2.1/freeglut-3.2.1.tar.gz
+    sha256: d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68
+
 - name: mesa
   config-opts:
   - --enable-osmesa
