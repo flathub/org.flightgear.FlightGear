@@ -133,7 +133,7 @@ modules:
 - shared-modules/udev/udev-175.json
 
 - name: flightgear
-  buildsystem: cmake-ninja
+  buildsystem: cmake
   config-opts:
   - -DENABLE_QT=ON
   - -DCMAKE_BUILD_TYPE=Release
