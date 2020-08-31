@@ -13,6 +13,12 @@ finish-args:
 - --socket=pulseaudio
 - --share=network
 - --persist=.fgfs
+# As of http://wiki.flightgear.org/$FG_HOME, "$FG_HOME is a notable place were
+# FlightGear data is written to, contrary to $FG_ROOT, which is generally read-only."
+# This means that it's safe to store the default built-in flightgear-data under /app,
+# which is writable but non-persistent.
+# The FG_ROOT can still be changed by passing the --fg-root option when calling flatpak run.
+- --env=FG_ROOT=/app/share/flightgear
 cleanup:
 - /include
 - /lib/pkgconfig
@@ -140,12 +146,13 @@ modules:
     sha256: 5acbd008a31119877fefbdfae912ae8495f716288731c91add487fc98828fe53
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
-  - type: file
-    path: flightgear.sh
+  - type: script
+    commands:
+    - fgfs --launcher "$@"
+    dest-filename: flightgear.sh
   build-commands:
   - install -Dm644 ../org.flightgear.FlightGear.appdata.xml /app/share/appdata/org.flightgear.FlightGear.appdata.xml
-  - install -Dm744 ../flightgear.sh /app/bin/flightgear.sh
-  - chmod +x /app/bin/flightgear.sh
+  - install -Dm755 ../flightgear.sh /app/bin/flightgear.sh
   post-install:
   - desktop-file-edit --set-key=Exec --set-value=flightgear.sh /app/share/applications/org.flightgear.FlightGear.desktop
   - desktop-file-edit --set-key=StartupWMClass --set-value=osgViewer /app/share/applications/org.flightgear.FlightGear.desktop
