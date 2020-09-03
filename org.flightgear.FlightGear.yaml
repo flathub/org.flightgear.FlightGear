@@ -74,10 +74,6 @@ modules:
   - type: archive
     url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
     sha256: aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
-  - type: shell
-    commands:
-    - sed 's|SET(LIB_POSTFIX "64" CACHE|SET(LIB_POSTFIX "" CACHE|' -i CMakeLists.txt
-    - sed 's|DGifCloseFile(giffile)|DGifCloseFile(giffile,0)|' -i src/osgPlugins/gif/ReaderWriterGIF.cpp
 
 - name: simgear
   builddir: true
