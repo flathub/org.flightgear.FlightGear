@@ -32,16 +32,16 @@ SentUpstream: 2014-09-17
 		<p>Il paesaggio di FlightGear copre tutto il mondo e viene scaricato mentre voli. Visita uno qualsiasi dei 20.000 aeroporti con una rappresentazione accurata degli edifici aeroportuali su molti dei più grandi aeroporti internazionali.</p>
 		<p>Sono supportati i più diffusi hardware di controllo del volo, come gioghi e levette. Sono presenti anche impostazioni per monitor multipli e multiplayer.</p>
 	</description>
-	<url type="homepage">http://www.flightgear.org/</url>
+	<url type="homepage">https://www.flightgear.org/</url>
 	<screenshots>
 		<screenshot type="default">
-			<image>http://wiki.flightgear.org/images/b/b3/SOTM-Feb18.jpg</image>
+			<image>https://wiki.flightgear.org/images/b/b3/SOTM-Feb18.jpg</image>
 		</screenshot>
 		<screenshot>
-			<image>http://wiki.flightgear.org/images/3/37/SOTY-2017.jpeg</image>
+			<image>https://wiki.flightgear.org/images/3/37/SOTY-2017.jpeg</image>
 		</screenshot>
 		<screenshot>
-			<image>http://wiki.flightgear.org/images/2/27/SOTM-Oct17.png</image>
+			<image>https://wiki.flightgear.org/images/2/27/SOTM-Oct17.png</image>
 		</screenshot>
 	</screenshots>
 	<content_rating type="oars-1.1">
@@ -50,9 +50,9 @@ SentUpstream: 2014-09-17
 	<project_license>GPL-2.0</project_license>
 	<developer_name>FlightGear Developers</developer_name>
 	<url type="bugtracker">https://sourceforge.net/p/flightgear/codetickets/</url>
-	<url type="donation">http://store.flightgear.org/</url>
-	<url type="help">http://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
-	<url type="translate">http://wiki.flightgear.org/Howto:Translate_FlightGear</url>
+	<url type="donation">https://store.flightgear.org/</url>
+	<url type="help">https://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
+	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
 		<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
 		<release date="2020-05-26" version="2020.1.3" />
