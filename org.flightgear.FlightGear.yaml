@@ -15,8 +15,6 @@ add-extensions:
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
-- --socket=wayland
-- --socket=fallback-x11
 - --socket=x11
 - --share=ipc
 - --device=all
