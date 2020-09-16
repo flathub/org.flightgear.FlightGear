@@ -19,6 +19,8 @@ finish-args:
 - --socket=x11
 - --device=shm
 - --share=ipc
+# Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
+# needs direct access to those peripherals.
 - --device=all
 - --socket=pulseaudio
 - --share=network
