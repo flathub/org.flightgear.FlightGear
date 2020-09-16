@@ -22,6 +22,9 @@ finish-args:
 # Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
 # needs direct access to those peripherals.
 - --device=all
+# Enable GPU acceleration (this is already covered by device=all but if one day
+# it gets removed, then we'll still have it).
+- --device=dri
 - --socket=pulseaudio
 - --share=network
 - --persist=.fgfs
