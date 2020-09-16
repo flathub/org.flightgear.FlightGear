@@ -15,7 +15,9 @@ add-extensions:
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
+# shm + IPC are required for X11, otherwise the performances aren't great
 - --socket=x11
+- --device=shm
 - --share=ipc
 - --device=all
 - --socket=pulseaudio
