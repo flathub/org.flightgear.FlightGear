@@ -66,6 +66,7 @@ modules:
   - -DCMAKE_BUILD_TYPE=Release
   - -DFREEGLUT_BUILD_DEMOS=OFF
   - -DFREEGLUT_BUILD_SHARED_LIBS=ON
+  - -DOpenGL_GL_PREFERENCE=GLVND
   sources:
   - type: archive
     url: https://sourceforge.net/projects/freeglut/files/freeglut/3.2.1/freeglut-3.2.1.tar.gz
