@@ -2,7 +2,7 @@ id: org.flightgear.FlightGear
 runtime: org.kde.Platform
 # When updating this version number, care must be taken to update the ffmpeg extension
 # version as well, by checking which version of the freedesktop-sdk this KDE runtime depends on.
-runtime-version: '5.14'
+runtime-version: 5.15
 sdk: org.kde.Sdk
 # ffmpeg might be used by libflite, the audio-synthesis library used by flightgear and provided by the KDE runtime.
 # As of https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/ec8fab8796126c8e3fbeaa9ed8d78ebfd12d2198,
@@ -10,7 +10,7 @@ sdk: org.kde.Sdk
 add-extensions:
 - org.freedesktop.Platform.ffmpeg-full:
   - directory: lib/ffmpeg
-  - version: 19.08
+  - version: 20.08
   - add-ld-path: .
 command: flightgear.sh
 rename-icon: flightgear
@@ -59,18 +59,6 @@ modules:
 
 - shared-modules/glu/glu-9.json
 - shared-modules/glew/glew.json
-
-- name: freeglut
-  buildsystem: cmake
-  config-opts:
-  - -DCMAKE_BUILD_TYPE=Release
-  - -DFREEGLUT_BUILD_DEMOS=OFF
-  - -DFREEGLUT_BUILD_SHARED_LIBS=ON
-  - -DOpenGL_GL_PREFERENCE=GLVND
-  sources:
-  - type: archive
-    url: https://sourceforge.net/projects/freeglut/files/freeglut/3.2.1/freeglut-3.2.1.tar.gz
-    sha256: d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68
 
 - name: openscenegraph
   buildsystem: cmake-ninja
