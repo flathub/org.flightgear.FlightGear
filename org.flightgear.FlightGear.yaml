@@ -54,8 +54,8 @@ modules:
   - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
   sources:
   - type: archive
-    url: https://dl.bintray.com/boostorg/release/1.73.0/source/boost_1_73_0.tar.bz2
-    sha256: 4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402
+    url: https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
+    sha256: afff36d392885120bcac079148c177d1f6f7730ec3d47233aa51b0afa4db94a5
 
 - shared-modules/glu/glu-9.json
 - shared-modules/glew/glew.json
@@ -78,8 +78,8 @@ modules:
   - -DENABLE_TESTS=OFF
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.3.tar.bz2
-    sha256: 9c57c8d71fb4357eb3eb9ad028e23c8ba6032aadaa6ef980038ce813ac38c23f
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.4.tar.bz2
+    sha256: 10d4159d84ae0c6f457b089cba5050a705d7b6ca42f42e19f8c2ed4b69434ad1
 
 - name: xmu
   sources:
@@ -104,8 +104,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.3-data.tar.bz2
-    sha256: 263a2366fadbac3dd5584580b69a0caf2c9adfea0f73bbfec42ef6509b7cb934
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.4-data.tar.bz2
+    sha256: 6fde29639b3a2892be307f657c5f19ea15ee537618ae44abf5cab5b8f19a11b3
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
@@ -125,8 +125,8 @@ modules:
   builddir: true
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.3.tar.bz2
-    sha256: 5e39e7aaf6fb49d1771c4e9f331f1af5a93d9fc55fe0ecb46173d4c9ec1d8732
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.4.tar.bz2
+    sha256: c8f375641071273d0410697df4438eb9f2758d7c2a6b568402d643744180a909
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: script

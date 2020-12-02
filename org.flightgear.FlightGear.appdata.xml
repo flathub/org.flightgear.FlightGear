@@ -64,6 +64,7 @@ SentUpstream: 2014-09-17
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
 		<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
+		<release date="2020-12-01" version="2020.3.4" />
 		<release date="2020-11-23" version="2020.3.3" />
 		<release date="2020-05-26" version="2020.1.3" />
 		<release date="2019-01-29" version="2018.3.2" />
