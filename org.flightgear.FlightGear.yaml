@@ -57,6 +57,7 @@ modules:
     url: https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
     sha256: afff36d392885120bcac079148c177d1f6f7730ec3d47233aa51b0afa4db94a5
 
+
 - shared-modules/glu/glu-9.json
 - shared-modules/glew/glew.json
 
@@ -78,8 +79,8 @@ modules:
   - -DENABLE_TESTS=OFF
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.4.tar.bz2
-    sha256: 10d4159d84ae0c6f457b089cba5050a705d7b6ca42f42e19f8c2ed4b69434ad1
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.5.tar.bz2
+    sha256: eb42497da30e13354098e8d08b72633dc9321b3452fcef15b98dfdd30c511c41
 
 - name: xmu
   sources:
@@ -104,8 +105,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.4-data.tar.bz2
-    sha256: 6fde29639b3a2892be307f657c5f19ea15ee537618ae44abf5cab5b8f19a11b3
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.5-data.tar.bz2
+    sha256: 3acc7f7d21d4013dd8251d798b01fdcbede9e116482ae9adaa1517fe8b0765d9
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
@@ -125,8 +126,8 @@ modules:
   builddir: true
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.4.tar.bz2
-    sha256: c8f375641071273d0410697df4438eb9f2758d7c2a6b568402d643744180a909
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.5.tar.bz2
+    sha256: 7e0979163c17a803def30fa2324cca3fb346bc5368919d5ee30974d457dd5217
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: script
