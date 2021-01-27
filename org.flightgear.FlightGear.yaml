@@ -54,8 +54,8 @@ modules:
   - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
   sources:
   - type: archive
-    url: https://dl.bintray.com/boostorg/release/1.74.0/source/boost_1_74_0.tar.gz
-    sha256: afff36d392885120bcac079148c177d1f6f7730ec3d47233aa51b0afa4db94a5
+    url: https://dl.bintray.com/boostorg/release/1.75.0/source/boost_1_75_0.tar.gz
+    sha256: aeb26f80e80945e82ee93e5939baebdca47b9dee80a07d3144be1e1a6a66dd6a
 
 
 - shared-modules/glu/glu-9.json
@@ -79,8 +79,8 @@ modules:
   - -DENABLE_TESTS=OFF
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.5.tar.bz2
-    sha256: eb42497da30e13354098e8d08b72633dc9321b3452fcef15b98dfdd30c511c41
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.6.tar.bz2
+    sha256: ec3eca44d21f7e052beafc1b9e2d57c16fbc1ad5f033abc967b57afd02c35669
 
 - name: xmu
   sources:
@@ -105,8 +105,8 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.5-data.tar.bz2
-    sha256: 3acc7f7d21d4013dd8251d798b01fdcbede9e116482ae9adaa1517fe8b0765d9
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.6-data.tar.bz2
+    sha256: c11a6c6dd596a82dd9bf59326c2ef7fb971ba79a236b4036db633bb6721a41ff
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
@@ -126,8 +126,8 @@ modules:
   builddir: true
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.5.tar.bz2
-    sha256: 7e0979163c17a803def30fa2324cca3fb346bc5368919d5ee30974d457dd5217
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.6.tar.bz2
+    sha256: 07d6fed32498d60c0bc27803330aa0d8f7cfb9260ab17df2a13af0d68383259e
   - type: file
     path: org.flightgear.FlightGear.appdata.xml
   - type: script
