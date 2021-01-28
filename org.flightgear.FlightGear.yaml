@@ -15,9 +15,8 @@ add-extensions:
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
-- --socket=wayland
 # shm + IPC are required for X11, otherwise the performances aren't great
-- --socket=fallback-x11
+- --socket=x11
 - --device=shm
 - --share=ipc
 # Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
