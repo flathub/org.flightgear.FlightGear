@@ -105,7 +105,7 @@ modules:
   buildsystem: simple
   sources:
   - type: archive
-    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.8-data.tar.bz2
+    url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.8-data.txz
     sha1: 8f919b22422c8ba708bba22c638416b9878031cc
     dest: fgdata
   build-commands:
