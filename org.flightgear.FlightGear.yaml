@@ -106,7 +106,7 @@ modules:
   sources:
   - type: archive
     url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.8-data.txz
-    sha1: 8f919b22422c8ba708bba22c638416b9878031cc
+    sha256: fca16e987464991bec53f2f58b5d631bf29baa86e73843fb9789723cc287c9c0
     dest: fgdata
   build-commands:
   - mkdir --parents /app/share/flightgear
