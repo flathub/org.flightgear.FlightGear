@@ -38,9 +38,6 @@ SentUpstream: 2014-09-17
 			<image>http://wiki.flightgear.org/images/b/b3/SOTM-Feb18.jpg</image>
 		</screenshot>
 		<screenshot>
-			<image>http://wiki.flightgear.org/images/3/37/SOTY-2017.jpeg</image>
-		</screenshot>
-		<screenshot>
 			<image>http://wiki.flightgear.org/images/2/27/SOTM-Oct17.png</image>
 		</screenshot>
 		<screenshot>
@@ -64,6 +61,7 @@ SentUpstream: 2014-09-17
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
 		<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
+		<release date="2021-03-25" version="2020.3.8" />
 		<release date="2021-01-24" version="2020.3.6" />
 		<release date="2020-12-19" version="2020.3.5" />
 		<release date="2020-12-01" version="2020.3.4" />
