@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2014 Richard Hughes <richard@hughsie.com> -->
-<!-- HOUSEKEEPING, REMOVE THIS COMMENT WHEN THIS GOES UPSTREAM
-BugReportURL: https://sourceforge.net/p/fgrun/support-requests/9/
-SentUpstream: 2014-09-17
--->
-<component type="desktop">
+<!-- FlightGear already has a metainfo file in their main repository, but to -->
+<!-- avoid too much back-and-forth changes to their one when screenshots or  -->
+<!-- releases are done, their metainfo file is replaced with this one.       -->
+<component type="desktop-application">
 	<id>org.flightgear.FlightGear</id>
 	<name>FlightGear</name>
 	<summary>A free and highly sophisticated flight simulator</summary>

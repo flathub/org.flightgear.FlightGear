@@ -129,14 +129,13 @@ modules:
     url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.8.tar.bz2
     sha256: 5d70ea859f6747e1704372dab997bc886c4e8e5c835c3ac4b63eb50501950d87
   - type: file
-    path: org.flightgear.FlightGear.appdata.xml
+    path: org.flightgear.FlightGear.metainfo.xml
   - type: script
     commands:
     - fgfs --launcher "$@"
     dest-filename: flightgear.sh
-  build-commands:
-  - install -Dm644 ../org.flightgear.FlightGear.appdata.xml /app/share/appdata/org.flightgear.FlightGear.appdata.xml
-  - install -Dm755 ../flightgear.sh /app/bin/flightgear.sh
   post-install:
+  - install -Dm644 ../org.flightgear.FlightGear.metainfo.xml /app/share/metainfo/org.flightgear.FlightGear.metainfo.xml
+  - install -Dm755 ../flightgear.sh /app/bin/flightgear.sh
   - desktop-file-edit --set-key=Exec --set-value=flightgear.sh /app/share/applications/org.flightgear.FlightGear.desktop
   - desktop-file-edit --set-key=StartupWMClass --set-value=osgViewer /app/share/applications/org.flightgear.FlightGear.desktop
