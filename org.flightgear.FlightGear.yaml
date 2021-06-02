@@ -4,14 +4,6 @@ runtime: org.kde.Platform
 # version as well, by checking which version of the freedesktop-sdk this KDE runtime depends on.
 runtime-version: 5.15
 sdk: org.kde.Sdk
-# ffmpeg might be used by libflite, the audio-synthesis library used by flightgear and provided by the KDE runtime.
-# As of https://invent.kde.org/packaging/flatpak-kde-runtime/-/commit/ec8fab8796126c8e3fbeaa9ed8d78ebfd12d2198,
-# the KDE runtime lets application depend on the ffmpeg runtime if needed (for libflite)
-add-extensions:
-  - org.freedesktop.Platform.ffmpeg-full:
-      - directory: lib/ffmpeg
-      - version: 20.08
-      - add-ld-path: .
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
