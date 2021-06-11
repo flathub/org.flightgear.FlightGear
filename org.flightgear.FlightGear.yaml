@@ -130,8 +130,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.8-data.txz
-        sha256: fca16e987464991bec53f2f58b5d631bf29baa86e73843fb9789723cc287c9c0
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.9-data.txz
+        sha256: ffff439931bd4c7e8ad12d1cbbeffc83c6d1a4e64b0857df43d420f9efbdb76c
         dest: fgdata
         x-checker-data:
           type: anitya
