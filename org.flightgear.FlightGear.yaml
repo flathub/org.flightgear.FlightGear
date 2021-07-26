@@ -46,13 +46,13 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://dl.bintray.com/boostorg/release/1.76.0/source/boost_1_76_0.tar.bz2
+        url: https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2
         sha256: f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
-          url-template: https://dl.bintray.com/boostorg/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+          url-template: https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
