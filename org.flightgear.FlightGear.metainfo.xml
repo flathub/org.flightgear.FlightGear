@@ -125,6 +125,8 @@
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
 		<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
+		<release version="2020.3.11" date="2021-07-29"/>
+		
 		<release version="2020.3.10" date="2021-07-26"/>
 		
 		<release date="2020-06-11" version="2020.3.9"/>

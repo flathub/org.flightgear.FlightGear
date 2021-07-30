@@ -80,8 +80,8 @@ modules:
       - -DENABLE_TESTS=OFF
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.10.tar.bz2
-        sha256: 2715bd9263760f9a0dd228c0331632b69390ee0b3e4432f9a94ecf739c21cbc8
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.11.tar.bz2
+        sha256: bb8dfcbc2a3b0143d1ffcf01d1a961e566ef21dd33d9cc768d6d9aa5871d4f3c
         x-checker-data:
           type: anitya
           project-id: 9667
@@ -122,8 +122,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.10-data.txz
-        sha256: 196d29985f4df6edd69ead54f48c7c152cd0a4ca214844035f71c4817bad5a91
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.11-data.txz
+        sha256: 123f151b2c0f4220f0dd55e875ca57a4ec38a94f71f8c04c58caeac077e2b558
         dest: fgdata
         x-checker-data:
           type: anitya
@@ -147,8 +147,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.10.tar.bz2
-        sha256: b2bce9fe66dfae50ec811772d68bae4cbe871a29510750e1fa3f08fd2c1e1867
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.11.tar.bz2
+        sha256: fe2706c7707ea73abc5114773de45f29861ab0f8f535656af0428ed049ca4a97
         x-checker-data:
           type: anitya
           project-id: 9716
