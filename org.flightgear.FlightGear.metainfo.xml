@@ -124,6 +124,7 @@
 	<url type="help">https://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<releases>
+		<release version="2020.3.12" date="2022-02-02"/>
 		<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
 		<release version="2020.3.11" date="2021-07-29"/>
 		
