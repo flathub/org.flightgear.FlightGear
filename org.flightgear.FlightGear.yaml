@@ -122,8 +122,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.13-data.txz
-        sha256: 0b7894540ec8250efb39d5dc6819d2a43a613058e61599a7d27a3342f7714893
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.14-data.txz
+        sha256: eec5c6d69a50895b20412fbc6c9e3c09377de182874ceba370af2bc557791745
         dest: fgdata
         x-checker-data:
           type: anitya
@@ -147,8 +147,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.13.tar.bz2
-        sha256: 661abfaf475abc8cfd1bab57559469efa662bc6d03f58e8d977385003fe5aa8c
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.14.tar.bz2
+        sha256: 57a2692eee6825eb7ae9210c4a11cd22895c35b5196bcace8af2668cfad5b5c9
         x-checker-data:
           type: anitya
           project-id: 9716
