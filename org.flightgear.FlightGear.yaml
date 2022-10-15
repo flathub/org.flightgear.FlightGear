@@ -7,16 +7,13 @@ sdk: org.kde.Sdk
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
-# shm + IPC are required for X11, otherwise the performances aren't great
+# IPC is required for X11, otherwise the performances aren't as great
   - --socket=x11
-  - --device=shm
   - --share=ipc
 # Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
-# needs direct access to those peripherals.
+# needs direct access to those peripherals. When a more sandbox-proof solution
+# is in place, replace by --device=dri for GPU acceleration
   - --device=all
-# Enable GPU acceleration (this is already covered by device=all but if one day
-# it gets removed, then we'll still have it).
-  - --device=dri
   - --socket=pulseaudio
   - --share=network
   - --persist=.fgfs
@@ -60,6 +57,7 @@ modules:
   - name: openscenegraph
     buildsystem: cmake-ninja
     config-opts:
+      # - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
@@ -75,7 +73,8 @@ modules:
     builddir: true
     buildsystem: cmake-ninja
     config-opts:
-      - -DCMAKE_BUILD_TYPE=ReleaseWithDebInfo
+      # - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_BUILD_TYPE=Release
       - -DOpenGL_GL_PREFERENCE=GLVND
       - -DENABLE_TESTS=OFF
     sources:
@@ -134,10 +133,10 @@ modules:
       - mv fgdata/* /app/share/flightgear/
 
   - name: flightgear
-    buildsystem: cmake
+    buildsystem: cmake-ninja
     config-opts:
       - -DENABLE_QT=ON
-      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DFG_BUILD_TYPE=Release
       - -DOpenGL_GL_PREFERENCE=GLVND
   # Set the path to the base data, as it can't find translations and such otherwise
