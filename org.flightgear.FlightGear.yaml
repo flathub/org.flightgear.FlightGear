@@ -79,8 +79,8 @@ modules:
       - -DENABLE_TESTS=OFF
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.16.tar.bz2
-        sha256: 246e1a75be4e48491b33d5c31402e34339b22cad30bf5d1fb77b0ed280fcc492
+        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.17.tar.bz2
+        sha256: 4c5e9cd0dcff1bd311c2460aa601230bd80abdbaec751b559c1d7147749f377c
         x-checker-data:
           type: anitya
           project-id: 9667
