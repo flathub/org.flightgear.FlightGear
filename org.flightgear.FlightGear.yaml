@@ -44,8 +44,8 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
-        sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+        url: https://archives.boost.io/release/1.84.0/source/boost_1_84_0.tar.bz2
+        sha256: cc4b893acf645c9d4b698e9a0f08ca8846aa5d6c68275c14c3e7949c24109454
         x-checker-data:
           type: anitya
           project-id: 6845
