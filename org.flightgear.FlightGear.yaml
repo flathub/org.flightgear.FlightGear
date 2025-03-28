@@ -8,8 +8,9 @@ command: flightgear.sh
 rename-icon: flightgear
 finish-args:
 # IPC is required for X11, otherwise the performances aren't as great
-  - --socket=x11
   - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
 # Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
 # needs direct access to those peripherals. When a more sandbox-proof solution
 # is in place, replace by --device=dri for GPU acceleration
@@ -43,13 +44,13 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://boostorg.jfrog.io/artifactory/main/release/1.84.0/source/boost_1_84_0.tar.bz2
-        sha256: cc4b893acf645c9d4b698e9a0f08ca8846aa5d6c68275c14c3e7949c24109454
+        url: https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.bz2
+        sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
-          url-template: https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+          url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -126,14 +127,12 @@ modules:
       - -DENABLE_TESTS=OFF
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/simgear-2020.3.19.tar.bz2
-        sha256: 3b937c5b94422478e5d79114bdcd6c78e43a0a6ffba97544a86d441c3f9e8c3a
+        url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
+        sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
         x-checker-data:
           type: anitya
           project-id: 9667
-          url-template: https://downloads.sourceforge.net/project/flightgear/release-$major.$minor/simgear-$version.tar.bz2
-      - type: patch
-        path: patches/simgear-build-fixes.patch
+          url-template: https://gitlab.com/flightgear/simgear/-/archive/v$major.$minor.$patch/simgear-v$version.tar.bz2
 
   - name: xmu
     sources:
@@ -170,13 +169,13 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/FlightGear-2020.3.19-data.txz
-        sha256: f3adc49cd054fab6137711f0315e876c1bbdf653ba1f798a1aecae9a6e984795
+        url: https://gitlab.com/flightgear/fgdata/-/archive/v2024.1.1/fgdata-v2024.1.1.tar.bz2
+        sha256: f3b79b6b317f89609a8e19ee65060921d847f6e9fdfbee016fd773f00910361c
         dest: fgdata
         x-checker-data:
           type: anitya
           project-id: 9716
-          url-template: https://downloads.sourceforge.net/project/flightgear/release-$major.$minor/FlightGear-$version-data.txz
+          url-template: https://gitlab.com/flightgear/fgdata/-/archive/v$major.$minor.$patch/fgdata-v$version.tar.bz2
     build-commands:
       - mkdir --parents /app/share/flightgear
       - mv fgdata/* /app/share/flightgear/
@@ -195,12 +194,12 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/flightgear/release-2020.3/flightgear-2020.3.19.tar.bz2
-        sha256: 167d08de9cc0f72218b379b23cd7e56c7f6ee18d7d559512da51a3bd67f38e6e
+        url: https://gitlab.com/flightgear/flightgear/-/archive/v2024.1.1/flightgear-v2024.1.1.tar.bz2
+        sha256: a3b1fea7064caa18964828e79cc1ec663f6aabf0fb5eb4f7f7fb82635fc8a937
         x-checker-data:
           type: anitya
           project-id: 9716
-          url-template: https://downloads.sourceforge.net/project/flightgear/release-$major.$minor/flightgear-$version.tar.bz2
+          url-template: https://gitlab.com/flightgear/flightgear/-/archive/v$major.$minor.$patch/flightgear-v$version.tar.bz2
       - type: file
         path: org.flightgear.FlightGear.metainfo.xml
       - type: script
