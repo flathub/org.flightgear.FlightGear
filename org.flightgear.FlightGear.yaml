@@ -2,7 +2,7 @@ id: org.flightgear.FlightGear
 runtime: org.kde.Platform
 # When updating this version number, care must be taken to update the ffmpeg extension
 # version as well, by checking which version of the freedesktop-sdk this KDE runtime depends on.
-runtime-version: 5.15-23.08
+runtime-version: 5.15-24.08
 sdk: org.kde.Sdk
 command: flightgear.sh
 rename-icon: flightgear
@@ -95,8 +95,8 @@ modules:
       - --enable-protocol=file
     sources:
       - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.3.6.tar.xz
-        sha256: f4b173d4d5f539a3699ef13d12a92dd4778ba55c26be1f3dd8f901b98987cc62
+        url: https://ffmpeg.org/releases/ffmpeg-4.3.9.tar.xz
+        sha256: 9e2a718f3956fa87a7dbc73e647d74171bf23b8964b6478d868b9aa623d03374
       - type: patch
         path: patches/ffmpeg-as-fix.patch
     cleanup:
