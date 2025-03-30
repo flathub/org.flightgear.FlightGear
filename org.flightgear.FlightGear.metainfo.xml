@@ -153,17 +153,18 @@
 		<name>The FlightGear Developers</name>
 	</developer>
 	<url type="homepage">https://www.flightgear.org/</url>
-	<url type="bugtracker">https://sourceforge.net/p/flightgear/codetickets/</url>
+	<url type="bugtracker">https://gitlab.com/groups/flightgear/-/issues</url>
 	<url type="faq">https://wiki.flightgear.org/Frequently_asked_questions</url>
-	<url type="help">https://flightgear.sourceforge.net/getstart-en/getstart-en.html</url>
+	<url type="help">https://wiki.flightgear.org/New_to_FlightGear</url>
 	<url type="donation">https://store.flightgear.org/</url>
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
-	<url type="contact">https://www.flightgear.org/flying/</url>
-	<url type="vcs-browser">https://sourceforge.net/p/flightgear/flightgear/ci/next/tree/</url>
+	<url type="contact">https://www.flightgear.org/support</url>
+	<url type="vcs-browser">https://gitlab.com/flightgear/flightgear</url>
 	<url type="contribute">https://wiki.flightgear.org/Portal:Developer</url>
 	<launchable type="desktop-id">org.flightgear.FlightGear.desktop</launchable>
 	<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
 	<releases>
+		<release version="2024.1.1" date="2025-02-19"/>
 		<release version="2020.3.19" date="2023-10-18"/>
 		<release version="2020.3.18" date="2023-03-21"/>
 		<release version="2020.3.17" date="2022-11-22"/>
