@@ -50,7 +50,7 @@ modules:
           type: anitya
           project-id: 6845
           stable-only: true
-          url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+          url-template: https://archives.boost.io/release/$version/source/boost_$major_$minor_$patch.tar.bz2
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -109,13 +109,13 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-3.6.5.tar.gz
-        sha256: aea196550f02974d6d09291c5d83b51ca6a03b3767e234a8c0e21322927d1e12
+        url: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-3.6.5/openscenegraph-OpenSceneGraph-3.6.5.tar.gz
+        sha256: c2c71bfaaf9ed28e28d763f94e361f7cfa2b026dc168f45f24ff391f0de9314e
         x-checker-data:
           type: anitya
           project-id: 6848
           stable-only: true
-          url-template: https://github.com/openscenegraph/OpenSceneGraph/archive/OpenSceneGraph-$version.tar.gz
+          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-$version/openscenegraph-OpenSceneGraph-$major.$minor.$patch.tar.gz
 
   - name: simgear
     builddir: true
