@@ -1,7 +1,5 @@
 id: org.flightgear.FlightGear
 runtime: org.kde.Platform
-# When updating this version number, care must be taken to update the ffmpeg extension
-# version as well, by checking which version of the freedesktop-sdk this KDE runtime depends on.
 runtime-version: 6.8
 sdk: org.kde.Sdk
 command: flightgear.sh
@@ -55,73 +53,24 @@ modules:
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
 
-  - name: ffmpeg
-    config-opts:
-      - --enable-shared
-      - --disable-static
-      - --disable-doc
-      - --disable-manpages
-      - --disable-stripping
-      - --disable-ffplay
-      - --disable-ffprobe
-
-      - --enable-gpl
-      - --enable-version3
-      - --enable-optimizations
-      - --enable-postproc
-      - --enable-pthreads
-      - --enable-gnutls
-      - --enable-libxcb-xfixes
-      - --enable-opengl
-      - --enable-vaapi
-      - --enable-vdpau
-      - --enable-zlib
-      - --enable-bzlib
-      - --enable-lzma
-
-      - --enable-fontconfig
-      - --enable-libfontconfig
-      - --enable-libfreetype
-
-      # copied from another manifest
-      - --enable-avcodec
-      - --enable-avfilter
-      - --enable-avresample
-      - --enable-libxml2
-      - --enable-swscale
-
-      - --enable-libxcb
-
-      - --enable-protocol=file
-    sources:
-      - type: archive
-        url: https://ffmpeg.org/releases/ffmpeg-4.3.6.tar.xz
-        sha256: f4b173d4d5f539a3699ef13d12a92dd4778ba55c26be1f3dd8f901b98987cc62
-      - type: patch
-        path: patches/ffmpeg-as-fix.patch
-    cleanup:
-      - /share/ffmpeg/examples
-
   - name: openscenegraph
     buildsystem: cmake-ninja
     config-opts:
-      # - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-3.6.5/openscenegraph-OpenSceneGraph-3.6.5.tar.gz
-        sha256: c2c71bfaaf9ed28e28d763f94e361f7cfa2b026dc168f45f24ff391f0de9314e
+        url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.gz
+        sha256: aa5aa43d19a67711e18208d42f51f6664fc763a1b732250677157bed29ee4a40
         x-checker-data:
           type: anitya
           project-id: 6848
           stable-only: true
-          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-$version/openscenegraph-OpenSceneGraph-$major.$minor.$patch.tar.gz
+          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/release/$version-build/openscenegraph-release-$version-build.tar.gz
 
   - name: simgear
     builddir: true
     buildsystem: cmake-ninja
     config-opts:
-      # - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DCMAKE_BUILD_TYPE=Release
       - -DOpenGL_GL_PREFERENCE=GLVND
       - -DENABLE_TESTS=OFF
