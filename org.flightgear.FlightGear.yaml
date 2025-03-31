@@ -59,13 +59,13 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-3.6.5/openscenegraph-OpenSceneGraph-3.6.5.tar.gz
-        sha256: c2c71bfaaf9ed28e28d763f94e361f7cfa2b026dc168f45f24ff391f0de9314e
+        url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.gz
+        sha256: aa5aa43d19a67711e18208d42f51f6664fc763a1b732250677157bed29ee4a40
         x-checker-data:
           type: anitya
           project-id: 6848
           stable-only: true
-          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/OpenSceneGraph-$version/openscenegraph-OpenSceneGraph-$major.$minor.$patch.tar.gz
+          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/release/$version-build/openscenegraph-release-$version-build.tar.gz
 
   - name: simgear
     builddir: true
