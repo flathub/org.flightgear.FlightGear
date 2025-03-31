@@ -42,13 +42,13 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.87.0/source/boost_1_87_0.tar.gz
-        sha256: f55c340aa49763b1925ccf02b2e83f35fdcf634c9d5164a2acb87540173c741d
+        url: https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
+        sha256: 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
-          url-template: https://archives.boost.io/release/$version/source/boost_$major_$minor_$patch.tar.gz
+          url-template: https://archives.boost.io/release/$version/source/boost_$major_$minor_$patch.tar.bz2
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
