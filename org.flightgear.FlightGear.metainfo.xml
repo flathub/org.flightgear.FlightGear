@@ -7,10 +7,10 @@
 	<project_license>GPL-2.0</project_license>
 	<id>org.flightgear.FlightGear</id>
 	<name>FlightGear</name>
-	<summary>A free and highly sophisticated flight simulator</summary>
-	<summary xml:lang="pt_BR">Um simulador de voo gratuito e altamente sofisticado</summary>
-	<summary xml:lang="es">Un simulador de vuelo gratuito y altamente sofisticado</summary>
-	<summary xml:lang="it">Un simulatore di volo gratuito e altamente sofisticato</summary>
+	<summary>Free open-source flight simulator</summary>
+	<summary xml:lang="pt_BR">Simulador de voo gratuito de código aberto</summary>
+	<summary xml:lang="es">Simulador de vuelo gratuito de código abierto</summary>
+	<summary xml:lang="it">Simulatore di volo open source gratuito</summary>
 	<description>
 		<p>FlightGear allows you to control over 400 aircraft, small and large in a range of
 			situations, types of weather, seasons, day and night cycle. This includes single-engine
@@ -61,6 +61,10 @@
 			levette. Sono
 			presenti anche impostazioni per monitor multipli e multiplayer.</p>
 	</description>
+	<branding>
+  		<color type="primary" scheme_preference="light">#427ec0</color>
+  		<color type="primary" scheme_preference="dark">#0e62bf</color>
+	</branding>
 	<!-- All the screenshots are licensed under CC-BY-SA 4.0 and available in the FlightGear wiki.
 	To find a lot of high quality FlightGear screenshots, see
 	https://wiki.flightgear.org/Category:Screenshots_at_high_settings,
