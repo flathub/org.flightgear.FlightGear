@@ -8,9 +8,9 @@
 	<id>org.flightgear.FlightGear</id>
 	<name>FlightGear</name>
 	<summary>Free and open-source flight simulator</summary>
-	<summary xml:lang="pt_BR">Simulador de voo gratuito de código aberto</summary>
-	<summary xml:lang="es">Simulador de vuelo gratuito de código abierto</summary>
-	<summary xml:lang="it">Simulatore di volo open source gratuito</summary>
+	<summary xml:lang="pt_BR">Simulador de voo gratuito e de código aberto</summary>
+	<summary xml:lang="es">Simulador de vuelo gratuito y de código abierto</summary>
+	<summary xml:lang="it">Simulatore di volo gratuito e open-source</summary>
 	<description>
 		<p>FlightGear allows you to control over 400 aircraft, small and large in a range of
 			situations, types of weather, seasons, day and night cycle. This includes single-engine
