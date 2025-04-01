@@ -5,22 +5,20 @@ sdk: org.kde.Sdk
 command: flightgear.sh
 rename-icon: flightgear
 finish-args:
-# IPC is required for X11, otherwise the performances aren't as great
+  # IPC is required for X11, otherwise the performance is not great
   - --share=ipc
   - --socket=fallback-x11
   - --socket=wayland
-# Joysticks, yokes, etc. aren't handled by libinput/wayland/x11, so the application
-# needs direct access to those peripherals. When a more sandbox-proof solution
-# is in place, replace by --device=dri for GPU acceleration
+  # Joysticks, yokes, etc. are not handled by libinput/wayland/x11, so the application
+  # needs direct access to those peripherals. When a more sandbox-proof solution
+  # is in place, replace it with "--device=dri" for GPU acceleration
   - --device=all
   - --socket=pulseaudio
   - --share=network
   - --persist=.fgfs
-# As of http://wiki.flightgear.org/$FG_HOME, "$FG_HOME is a notable place were
-# FlightGear data is written to, contrary to $FG_ROOT, which is generally read-only."
-# This means that it's safe to store the default built-in flightgear-data under /app,
-# which is writable but non-persistent.
-# The FG_ROOT can still be changed by passing the --fg-root option when calling flatpak run.
+  # $FG_HOME is the place were FlightGear data is written to, contrary to $FG_ROOT, which is generally read-only.
+  # It is safe to store the built-in flightgear-data under /app, which is writable but non-persistent.
+  # The $FG_ROOT can still be changed by passing the "--fg-root" option when calling "flatpak run".
   - --env=FG_ROOT=/app/share/flightgear
 cleanup:
   - /include
@@ -48,7 +46,11 @@ modules:
           type: anitya
           project-id: 6845
           stable-only: true
-          url-template: https://archives.boost.io/release/$version/source/boost_$major_$minor_$patch.tar.bz2
+          url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+          # SimgGear 2024.1.1 is incompatible with Boost 1.87.0. There is a patch available if an update is urgently needed at:
+          # https://gitlab.com/flightgear/simgear/-/issues/11#note_2350195640
+          versions:
+            <: 1.87.0
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -59,13 +61,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.gz
-        sha256: aa5aa43d19a67711e18208d42f51f6664fc763a1b732250677157bed29ee4a40
-        x-checker-data:
-          type: anitya
-          project-id: 6848
-          stable-only: true
-          url-template: https://gitlab.com/flightgear/openscenegraph/-/archive/release/$version-build/openscenegraph-release-$version-build.tar.gz
+        url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.bz2
+        sha256: bf4da20bba1f434a03824b669a79a85b4124b997b2fa5b159d42722bb1e012e9
 
   - name: simgear
     builddir: true
@@ -78,20 +75,16 @@ modules:
       - type: archive
         url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
         sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
-        x-checker-data:
-          type: anitya
-          project-id: 9667
-          url-template: https://gitlab.com/flightgear/simgear/-/archive/v$major.$minor.$patch/simgear-v$version.tar.bz2
 
   - name: xmu
     sources:
       - type: archive
-        url: https://www.x.org/archive/individual/lib/libXmu-1.2.1.tar.xz
-        sha256: fcb27793248a39e5fcc5b9c4aec40cc0734b3ca76aac3d7d1c264e7f7e14e8b2
+        url: https://gitlab.freedesktop.org/xorg/lib/libxmu/-/archive/libXmu-1.2.1/libxmu-libXmu-1.2.1.tar.gz
+        sha256: 420979c1fd4438a9f41e0086f10c8d2a00125643f6d4ff7ed67282878ae39531
         x-checker-data:
           type: anitya
           project-id: 1785
-          url-template: https://www.x.org/archive/individual/lib/libXmu-$version.tar.xz
+          url-template: https://gitlab.freedesktop.org/xorg/lib/libxmu/-/archive/libXmu-$version/libxmu-libXmu-$version.tar.gz
 
   - name: plib
     sources:
@@ -121,10 +114,6 @@ modules:
         url: https://gitlab.com/flightgear/fgdata/-/archive/v2024.1.1/fgdata-v2024.1.1.tar.bz2
         sha256: f3b79b6b317f89609a8e19ee65060921d847f6e9fdfbee016fd773f00910361c
         dest: fgdata
-        x-checker-data:
-          type: anitya
-          project-id: 9716
-          url-template: https://gitlab.com/flightgear/fgdata/-/archive/v$major.$minor.$patch/fgdata-v$version.tar.bz2
     build-commands:
       - mkdir --parents /app/share/flightgear
       - mv fgdata/* /app/share/flightgear/
@@ -136,19 +125,15 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DFG_BUILD_TYPE=Release
       - -DOpenGL_GL_PREFERENCE=GLVND
-  # Set the path to the base data, as it can't find translations and such otherwise
+      # Set the path to the base data, as it can not find the translations otherwise
       - -DFG_DATA_DIR=/app/share/flightgear
-  # Let flightgear build flite, as at least we know it'll work
+      # Let FlightGear build flite, because we know it will work
       - -DSYSTEM_FLITE=0
     builddir: true
     sources:
       - type: archive
         url: https://gitlab.com/flightgear/flightgear/-/archive/v2024.1.1/flightgear-v2024.1.1.tar.bz2
         sha256: a3b1fea7064caa18964828e79cc1ec663f6aabf0fb5eb4f7f7fb82635fc8a937
-        x-checker-data:
-          type: anitya
-          project-id: 9716
-          url-template: https://gitlab.com/flightgear/flightgear/-/archive/v$major.$minor.$patch/flightgear-v$version.tar.bz2
       - type: file
         path: org.flightgear.FlightGear.metainfo.xml
       - type: script
