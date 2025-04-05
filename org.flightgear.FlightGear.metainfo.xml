@@ -7,10 +7,10 @@
 	<project_license>GPL-2.0</project_license>
 	<id>org.flightgear.FlightGear</id>
 	<name>FlightGear</name>
-	<summary>Free and open-source flight simulator</summary>
-	<summary xml:lang="pt_BR">Simulador de voo gratuito e de código aberto</summary>
-	<summary xml:lang="es">Simulador de vuelo gratuito y de código abierto</summary>
-	<summary xml:lang="it">Simulatore di volo gratuito e open-source</summary>
+	<summary>Flight simulator</summary>
+	<summary xml:lang="pt_BR">Simulador de voo</summary>
+	<summary xml:lang="es">Simulador de vuelo</summary>
+	<summary xml:lang="it">Simulatore di volo</summary>
 	<description>
 		<p>FlightGear allows you to control over 400 aircraft, small and large in a range of
 			situations, types of weather, seasons, day and night cycle. This includes single-engine
