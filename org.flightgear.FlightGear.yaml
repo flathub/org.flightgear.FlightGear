@@ -72,7 +72,7 @@ modules:
         url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
         sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
         type: patch
-        path: patches/simgear-build-fixes.patch
+        path: patches/simgear-boost-fix.patch
 
   - name: xmu
     sources:
