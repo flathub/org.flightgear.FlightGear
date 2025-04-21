@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 69925945..916e01fd 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -132,7 +132,7 @@ endif()
+ find_package(Threads REQUIRED)
+ 
+ find_package(Boost REQUIRED)
+-set (BOOST_CXX_FLAGS "-DBOOST_BIMAP_DISABLE_SERIALIZATION -DBOOST_NO_STDLIB_CONFIG -DBOOST_NO_AUTO_PTR -DBOOST_NO_CXX98_BINDERS")
++set (BOOST_CXX_FLAGS "-DBOOST_BIMAP_DISABLE_SERIALIZATION -DBOOST_NO_AUTO_PTR -DBOOST_NO_CXX98_BINDERS")
+ include(BoostTestTargets)
+ 
+ set(SG_SOUND_USES_OPENALSOFT OFF) # default to off
