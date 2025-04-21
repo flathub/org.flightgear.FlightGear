@@ -47,6 +47,8 @@ modules:
           project-id: 6845
           stable-only: true
           url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+        type: patch
+        path: patches/simgear-boost-fix.patch
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -71,8 +73,6 @@ modules:
       - type: archive
         url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
         sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
-        type: patch
-        path: patches/simgear-boost-fix.patch
 
   - name: xmu
     sources:
