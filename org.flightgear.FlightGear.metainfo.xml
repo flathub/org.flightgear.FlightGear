@@ -159,12 +159,12 @@
 	<url type="homepage">https://www.flightgear.org/</url>
 	<url type="bugtracker">https://gitlab.com/groups/flightgear/-/issues</url>
 	<url type="faq">https://wiki.flightgear.org/Frequently_asked_questions</url>
-	<url type="help">https://wiki.flightgear.org/New_to_FlightGear</url>
-	<url type="donation">https://store.flightgear.org/</url>
+	<url type="help">https://www.flightgear.org/support</url>
+	<url type="donation">https://www.flightgear.org/donate</url>
 	<url type="translate">https://wiki.flightgear.org/Howto:Translate_FlightGear</url>
 	<url type="contact">https://www.flightgear.org/support</url>
 	<url type="vcs-browser">https://gitlab.com/flightgear/flightgear</url>
-	<url type="contribute">https://wiki.flightgear.org/Portal:Developer</url>
+	<url type="contribute">https://www.flightgear.org/contribute</url>
 	<launchable type="desktop-id">org.flightgear.FlightGear.desktop</launchable>
 	<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
 	<releases>
