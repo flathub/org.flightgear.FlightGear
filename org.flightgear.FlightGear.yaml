@@ -39,17 +39,13 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
-        sha256: 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b
+        url: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2
+        sha256: 85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
           url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
-          # SimgGear 2024.1.1 is incompatible with Boost 1.87.0. There is a patch available if an update is urgently needed at:
-          # https://gitlab.com/flightgear/simgear/-/issues/11#note_2350195640
-          versions:
-            <: 1.87.0
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -61,7 +57,7 @@ modules:
     sources:
       - type: archive
         url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.bz2
-        sha256: bf4da20bba1f434a03824b669a79a85b4124b997b2fa5b159d42722bb1e012e9
+        sha256: 0a3d0d45168d5d5cd389682d4b7260b72e1f9582a03d03dda1261b6b0dff34f5
 
   - name: simgear
     builddir: true
@@ -72,8 +68,8 @@ modules:
       - -DENABLE_TESTS=OFF
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
-        sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
+        url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.2-rc8/simgear-2024.1.2-rc8.tar.bz2
+        sha256: e5e79a0a93cb00b82a50e99a596f6d144fa7561d482e1ad871b3c750b172db8f
 
   - name: xmu
     sources:
@@ -110,8 +106,8 @@ modules:
     buildsystem: simple
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/fgdata/-/archive/v2024.1.1/fgdata-v2024.1.1.tar.bz2
-        sha256: f3b79b6b317f89609a8e19ee65060921d847f6e9fdfbee016fd773f00910361c
+        url: https://gitlab.com/flightgear/fgdata/-/archive/2024.1.2-rc8/fgdata-2024.1.2-rc8.tar.bz2
+        sha256: 764f43da62062afd4c03510f6404f484d4362e968908a9980ffc7f49cd838778
         dest: fgdata
     build-commands:
       - mkdir --parents /app/share/flightgear
@@ -131,8 +127,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/flightgear/-/archive/v2024.1.1/flightgear-v2024.1.1.tar.bz2
-        sha256: a3b1fea7064caa18964828e79cc1ec663f6aabf0fb5eb4f7f7fb82635fc8a937
+        url: https://gitlab.com/flightgear/flightgear/-/archive/2024.1.2-rc8/flightgear-2024.1.2-rc8.tar.bz2
+        sha256: 9558fe6b8a7fd74d94cceb0318adb9422ebd2d862fa1d8a4c909679669fd3204
       - type: file
         path: org.flightgear.FlightGear.metainfo.xml
       - type: script
