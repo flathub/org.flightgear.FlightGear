@@ -39,13 +39,17 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2
-        sha256: 85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
+        url: https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
+        sha256: 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
           url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
+          # SimgGear 2024.1.1 is incompatible with Boost 1.87.0. There is a patch available if an update is urgently needed at:
+          # https://gitlab.com/flightgear/simgear/-/issues/11#note_2350195640
+          versions:
+            <: 1.87.0
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
