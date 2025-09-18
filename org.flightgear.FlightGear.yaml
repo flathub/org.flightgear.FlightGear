@@ -39,17 +39,13 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
-        sha256: 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b
+        url: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2
+        sha256: 85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
           url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
-          # SimgGear 2024.1.1 is incompatible with Boost 1.87.0. There is a patch available if an update is urgently needed at:
-          # https://gitlab.com/flightgear/simgear/-/issues/11#note_2350195640
-          versions:
-            <: 1.87.0
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
@@ -60,6 +56,16 @@ modules:
       - type: archive
         url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.bz2
         sha256: 0a3d0d45168d5d5cd389682d4b7260b72e1f9582a03d03dda1261b6b0dff34f5
+
+  - name: c-ares
+    sources:
+      - type: archive
+        url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.5.tar.gz
+        sha256: dcd919635f01b7c8c9c2f5fb38063cd86500f7c6d4d32ecf4deff5e3497fb157
+        x-checker-data:
+          type: anitya
+          project-id: 5840
+          url-template: https://github.com/c-ares/c-ares/archive/refs/tags/v$version.tar.gz
 
   - name: xmu
     sources:
@@ -104,6 +110,8 @@ modules:
         url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.2/simgear-2024.1.2.tar.bz2
         sha256: 5f2f112d1a0e6ea10497d61e13411b106771914880e155cdef667586dc57e154
 
+
+
   - name: flightgear-data
     buildsystem: simple
     sources:
@@ -142,4 +150,3 @@ modules:
       - install -Dm755 ../flightgear.sh /app/bin/flightgear.sh
       - desktop-file-edit --set-key=Exec --set-value=flightgear.sh /app/share/applications/org.flightgear.FlightGear.desktop
       - desktop-file-edit --set-key=StartupWMClass --set-value=osgViewer /app/share/applications/org.flightgear.FlightGear.desktop
-      
