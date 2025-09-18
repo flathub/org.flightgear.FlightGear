@@ -58,6 +58,7 @@ modules:
         sha256: 0a3d0d45168d5d5cd389682d4b7260b72e1f9582a03d03dda1261b6b0dff34f5
 
   - name: c-ares
+    buildsystem: simple
     sources:
       - type: archive
         url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.5.tar.gz
