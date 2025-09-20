@@ -76,78 +76,83 @@
 	<screenshots>
 		<screenshot type="default">
 			<image>https://wiki.flightgear.org/images/8/8a/Bell_UH-1D_Huey%40Matterhorn.jpg</image>
+			<caption>Bell UH-1D Huey at Matterhorn</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/1/1f/Cessna_172P_over_Lake_of_Constance.jpg</image>
+			<caption>Cessna 172P over Lake of Constance</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/8/8d/Cessna_182S_at_LEBL.jpg</image>
+			<caption>Cessna 182S at LEBL</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/0/00/CH53-E-approaching-USS-Vinson-battle-group.jpg</image>
+			<caption>CH53E approaching USS Vinson battle group</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/6/69/DC3Swissairlines.png</image>
+			<caption>DC3 Swissairlines</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/7/7f/EC135_Sea_of_fog.jpg</image>
+			<caption>EC135 sea of fog</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/4/42/Hot_Stuff_with_H130_at_Stromboli.jpg</image>
+			<caption>Hot stuff with H130 at Stromboli</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/5/55/Ju-52_taking_off_from_EDDI.jpg</image>
+			<caption>Ju-52 taking off from EDDI</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/5/51/SOTM_2019-06_Catching_the_rainbow_by_F5SLQ.png</image>
+			<caption>Catching the rainbow</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/e/e1/SOTM_2019-06_Stormy_Singapore_by_sidi762.jpg</image>
+			<caption>Stormy Singapore</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/b/b3/SOTM_2019-08_Low_Landing_by_sidi762.jpg</image>
+			<caption>Low landing</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/8/8a/SOTM_2020-01_Tweet_over_cloud_by_erik.jpg</image>
+			<caption>Tweet over cloud</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/9/93/SOTM_2020-02_A_Pinch_Of_Star_Dust_by_GinGin.jpg</image>
+			<caption>A pinch of star dust</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/3/31/SOTM_2020-02_Beijing_Approach_by_sidi762.jpg</image>
+			<caption>Beijing approach</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/a/a7/SOTM_2020-02_Dawn_Landing_by_dg-505.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image>https://wiki.flightgear.org/images/b/b6/SOTM-July18.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image>https://wiki.flightgear.org/images/c/c0/SOTM-June17.png</image>
+			<caption>Dawn landing</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/7/77/DHC-6_Twin_Otter_in_steep_climb.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image>https://wiki.flightgear.org/images/e/ed/Reikjavik%2C_Iceland_with_OSM2City_output_%28Flightgear_2020.x%29.jpg</image>
+			<caption>DHC-6 Twin Otter in steep climb</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/3/3b/Stemme_S6_over_Montserrat.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image>https://wiki.flightgear.org/images/e/e6/ALS_Compositor_pipeline.jpg</image>
+			<caption>Stemme S6 over Montserrat</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/d/db/C-47_in_flight.jpg</image>
+			<caption>C-47 in flight</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/0/0f/P-51D_over_Koblenz.jpg</image>
-		</screenshot>
-		<screenshot>
-			<image>https://wiki.flightgear.org/images/6/6c/SOTM_2020-01_Dawn_at_Paris-Orly_by_barszczisbad.jpg</image>
+			<caption>P-51D over Koblenz</caption>
 		</screenshot>
 		<screenshot>
 			<image>https://wiki.flightgear.org/images/3/3c/Truman07.jpg</image>
+			<caption>Truman 07</caption>
 		</screenshot>
 	</screenshots>
 	<content_rating type="oars-1.1">
@@ -168,23 +173,62 @@
 	<launchable type="desktop-id">org.flightgear.FlightGear.desktop</launchable>
 	<!-- When updating flightgear, add a new line below (don't remove the older ones) and sort them newest-first -->
 	<releases>
-		<release version="2024.1.1" date="2025-02-19"/>
-		<release version="2020.3.19" date="2023-10-18"/>
-		<release version="2020.3.18" date="2023-03-21"/>
-		<release version="2020.3.17" date="2022-11-22"/>
-		<release version="2020.3.16" date="2022-10-20"/>
-		<release version="2020.3.14" date="2022-09-27"/>
-		<release version="2020.3.13" date="2022-03-30"/>
-		<release version="2020.3.12" date="2022-02-02"/>
-		<release version="2020.3.11" date="2021-07-29"/>
-		<release version="2020.3.10" date="2021-07-26"/>
-		<release date="2020-06-11" version="2020.3.9"/>
-		<release date="2021-03-25" version="2020.3.8"/>
-		<release date="2021-01-24" version="2020.3.6"/>
-		<release date="2020-12-19" version="2020.3.5"/>
-		<release date="2020-12-01" version="2020.3.4"/>
-		<release date="2020-11-23" version="2020.3.3"/>
-		<release date="2020-05-26" version="2020.1.3"/>
-		<release date="2019-01-29" version="2018.3.2"/>
+		<release version="2024.1.2" date="2025-09-18">
+			<url type="details">https://www.flightgear.org/download/releases/2024-1-2/</url>
+		</release>
+		<release version="2024.1.1" date="2025-02-19">
+			<url type="details">https://www.flightgear.org/download/releases/2024-1/</url>
+		</release>
+		<release version="2020.3.19" date="2023-10-18">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020319/</url>
+		</release>
+		<release version="2020.3.18" date="2023-03-21">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020318/</url>
+		</release>
+		<release version="2020.3.17" date="2022-11-22">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020317/</url>
+		</release>
+		<release version="2020.3.16" date="2022-10-20">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020316/</url>
+		</release>
+		<release version="2020.3.14" date="2022-09-27">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020314/</url>
+		</release>
+		<release version="2020.3.13" date="2022-03-30">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020313/</url>
+		</release>
+		<release version="2020.3.12" date="2022-02-02">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020312/</url>
+		</release>
+		<release version="2020.3.11" date="2021-07-29">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020311/</url>
+		</release>
+		<release version="2020.3.10" date="2021-07-26">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#2020310/</url>
+		</release>
+		<release date="2020-06-11" version="2020.3.9">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202039/</url>
+		</release>
+		<release date="2021-03-25" version="2020.3.8">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202038/</url>
+		</release>
+		<release date="2021-01-24" version="2020.3.6">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202036/</url>
+		</release>
+		<release date="2020-12-19" version="2020.3.5">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202035/</url>
+		</release>
+		<release date="2020-12-01" version="2020.3.4">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202034/</url>
+		</release>
+		<release date="2020-11-23" version="2020.3.3">
+			<url type="details">https://www.flightgear.org/download/releases/2020-3/#202033/</url>
+		</release>
+		<release date="2020-05-26" version="2020.1.3">
+			<url type="details">https://wiki.flightgear.org/Changelog_2020.1/</url>
+		</release>
+		<release date="2019-01-29" version="2018.3.2">
+			<url type="details">https://wiki.flightgear.org/Changelog_2018.3/</url>
+		</release>
 	</releases>
 </component>
