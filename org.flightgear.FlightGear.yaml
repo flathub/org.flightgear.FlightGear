@@ -39,41 +39,23 @@ modules:
       - ./b2 --build-type=minimal -j $FLATPAK_BUILDER_N_JOBS install
     sources:
       - type: archive
-        url: https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2
-        sha256: 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b
+        url: https://archives.boost.io/release/1.89.0/source/boost_1_89_0.tar.bz2
+        sha256: 85a33fa22621b4f314f8e85e1a5e2a9363d22e4f4992925d4bb3bc631b5a0c7a
         x-checker-data:
           type: anitya
           project-id: 6845
           stable-only: true
           url-template: https://archives.boost.io/release/$version/source/boost_${major}_${minor}_$patch.tar.bz2
-          # SimgGear 2024.1.1 is incompatible with Boost 1.87.0. There is a patch available if an update is urgently needed at:
-          # https://gitlab.com/flightgear/simgear/-/issues/11#note_2350195640
-          versions:
-            <: 1.87.0
 
   - shared-modules/glu/glu-9.json
   - shared-modules/glew/glew.json
 
   - name: openscenegraph
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
         url: https://gitlab.com/flightgear/openscenegraph/-/archive/release/2024-build/openscenegraph-release-2024-build.tar.bz2
-        sha256: bf4da20bba1f434a03824b669a79a85b4124b997b2fa5b159d42722bb1e012e9
-
-  - name: simgear
-    builddir: true
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DOpenGL_GL_PREFERENCE=GLVND
-      - -DENABLE_TESTS=OFF
-    sources:
-      - type: archive
-        url: https://gitlab.com/flightgear/simgear/-/archive/v2024.1.1/simgear-v2024.1.1.tar.bz2
-        sha256: b75d3940d923a46c445c9afa6f8eb09f6a944ff23c4b546e72ba75fb5482a794
+        sha256: 0a3d0d45168d5d5cd389682d4b7260b72e1f9582a03d03dda1261b6b0dff34f5
 
   - name: xmu
     sources:
@@ -106,12 +88,39 @@ modules:
           project-id: 1606
           url-template: https://github.com/libevent/libevent/archive/refs/tags/release-$version-stable.tar.gz
 
+  - name: c-ares
+    builddir: true
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCARES_BUILD_TOOLS=OFF
+    sources:
+      - type: archive
+        url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.5.tar.gz
+        sha256: dcd919635f01b7c8c9c2f5fb38063cd86500f7c6d4d32ecf4deff5e3497fb157
+        x-checker-data:
+          type: anitya
+          project-id: 5840
+          url-template: https://github.com/c-ares/c-ares/archive/refs/tags/v$version.tar.gz
+
+  - name: simgear
+    builddir: true
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DOpenGL_GL_PREFERENCE=GLVND
+      - -DENABLE_TESTS=OFF
+    sources:
+      - type: archive
+        url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.2/simgear-2024.1.2.tar.bz2
+        sha256: 5f2f112d1a0e6ea10497d61e13411b106771914880e155cdef667586dc57e154
+
   - name: flightgear-data
     buildsystem: simple
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/fgdata/-/archive/v2024.1.1/fgdata-v2024.1.1.tar.bz2
-        sha256: f3b79b6b317f89609a8e19ee65060921d847f6e9fdfbee016fd773f00910361c
+        url: https://gitlab.com/flightgear/fgdata/-/archive/2024.1.2/fgdata-2024.1.2.tar.bz2
+        sha256: 24b6bd016e1bffe5c9fdbe42a049b133d534bacf2a9a4c64c002bb1882a86dcf
         dest: fgdata
     build-commands:
       - mkdir --parents /app/share/flightgear
@@ -131,8 +140,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/flightgear/-/archive/v2024.1.1/flightgear-v2024.1.1.tar.bz2
-        sha256: a3b1fea7064caa18964828e79cc1ec663f6aabf0fb5eb4f7f7fb82635fc8a937
+        url: https://gitlab.com/flightgear/flightgear/-/archive/2024.1.2/flightgear-2024.1.2.tar.bz2
+        sha256: 228e2adf3fc0f8a11cdd8b7d785ae158c58e1df55f5c686bbde8ec7d354b0c31
       - type: file
         path: org.flightgear.FlightGear.metainfo.xml
       - type: script
