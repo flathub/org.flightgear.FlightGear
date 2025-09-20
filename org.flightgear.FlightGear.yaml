@@ -89,7 +89,11 @@ modules:
           url-template: https://github.com/libevent/libevent/archive/refs/tags/release-$version-stable.tar.gz
 
   - name: c-ares
-    buildsystem: autotools
+    builddir: true
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCARES_BUILD_TOOLS=OFF
     sources:
       - type: archive
         url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.5.tar.gz
