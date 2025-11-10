@@ -153,3 +153,4 @@ modules:
       - install -Dm755 ../flightgear.sh /app/bin/flightgear.sh
       - desktop-file-edit --set-key=Exec --set-value=flightgear.sh /app/share/applications/org.flightgear.FlightGear.desktop
       - desktop-file-edit --set-key=StartupWMClass --set-value=FlightGear /app/share/applications/org.flightgear.FlightGear.desktop
+      - desktop-file-edit --set-key=Name --set-value="FlightGear" /app/share/applications/org.flightgear.FlightGear.desktop
