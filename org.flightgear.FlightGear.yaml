@@ -112,15 +112,15 @@ modules:
       - -DENABLE_TESTS=OFF
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.4/simgear-2024.1.4.tar.bz2
-        sha256: f8cb19d95f574a4f9ceb57f473963d3b185a4cacd6d948b528dcaebfb2807e05
+        url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.5/simgear-2024.1.5.tar.bz2
+        sha256: 74469e4cd767d29172dcaa0ec264532651e08ffbb2720f0effa6bc666aa13bad
 
   - name: flightgear-data
     buildsystem: simple
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/fgdata/-/archive/2024.1.4/fgdata-2024.1.4.tar.bz2
-        sha256: 7a856ae4d2b5dd25005d47801f22857a7c4b78a5f57bacedfd3a8c44ec02993d
+        url: https://gitlab.com/flightgear/fgdata/-/archive/2024.1.5/fgdata-2024.1.5.tar.bz2
+        sha256: 97974bda90dae5cccd73c760d879f38b6c3c26a4f783b072106df4d53699c690
         dest: fgdata
     build-commands:
       - mkdir --parents /app/share/flightgear
@@ -140,8 +140,8 @@ modules:
     builddir: true
     sources:
       - type: archive
-        url: https://gitlab.com/flightgear/flightgear/-/archive/2024.1.4/flightgear-2024.1.4.tar.bz2
-        sha256: c551e7560bd172072ed48e31176124295af20f2603becff807f5738802301163
+        url: https://gitlab.com/flightgear/flightgear/-/archive/2024.1.5/flightgear-2024.1.5.tar.bz2
+        sha256: b770d811f8101610a9b4c2302c48c155d8cc28e0294bc4f64cbbdfed18d96a8a
       - type: file
         path: org.flightgear.FlightGear.metainfo.xml
       - type: script
