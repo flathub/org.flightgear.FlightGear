@@ -96,8 +96,8 @@ modules:
       - -DCARES_BUILD_TOOLS=OFF
     sources:
       - type: archive
-        url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.6.tar.gz
-        sha256: 4358939ff800b13b92f37d5fdda003718101faedfbdee792d6b79ddc1a53d890
+        url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.7.tar.gz
+        sha256: 2f04ab21661e96378d6bb16b34b00e61764a0418f8d87765ee896fab5801153c
         x-checker-data:
           type: anitya
           project-id: 5840
