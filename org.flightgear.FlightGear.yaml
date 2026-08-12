@@ -103,6 +103,22 @@ modules:
           project-id: 5840
           url-template: https://github.com/c-ares/c-ares/archive/refs/tags/v$version.tar.gz
 
+  - name: openal-soft
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DALSOFT_UTILS=OFF
+      - -DALSOFT_EXAMPLES=OFF
+      - -DALSOFT_TESTS=OFF
+    sources:
+      - type: archive
+        url: https://github.com/kcat/openal-soft/archive/refs/tags/1.25.2.tar.gz
+        sha256: fb27e5839aa11f0e5b9d33756965291fad5d6909ab928ea1f796f4a1a6877894
+        x-checker-data:
+          type: anitya
+          project-id: 8172
+          url-template: https://github.com/kcat/openal-soft/archive/refs/tags/$version.tar.gz
+
   - name: simgear
     builddir: true
     buildsystem: cmake-ninja
