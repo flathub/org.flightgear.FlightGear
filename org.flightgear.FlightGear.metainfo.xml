@@ -75,35 +75,35 @@
 	Please make sure to only include very good looking screenshots, similar with the current ones. -->
 	<screenshots>
 		<screenshot type="default">
-			<image type="source" width="1600" height="900">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/Cessna_172P_over_Lake_of_Constance.jpg</image>
+			<image type="source" width="1600" height="900">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/Cessna_172P_over_Lake_of_Constance.jpg</image>
 			<caption>Cessna 172P over Lake of Constance</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/Cessna_182S_at_LEBL.jpg</image>
+			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/Cessna_182S_at_LEBL.jpg</image>
 			<caption>Cessna 182S at LEBL</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="1920" height="1080">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/EC135_Sea_of_fog.jpg</image>
+			<image type="source" width="1920" height="1080">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/EC135_Sea_of_fog.jpg</image>
 			<caption>EC135 sea of fog</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="1600" height="900">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/H130_at_Stromboli.jpg</image>
+			<image type="source" width="1600" height="900">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/H130_at_Stromboli.jpg</image>
 			<caption>Hot stuff with H130 at Stromboli</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/Ju-52_taking_off_from_EDDI.jpg</image>
+			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/Ju-52_taking_off_from_EDDI.jpg</image>
 			<caption>Ju-52 taking off from EDDI</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="5230" height="2941">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/SOTM_2020-02_Dawn_Landing_by_dg-505.jpg</image>
+			<image type="source" width="5230" height="2941">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/SOTM_2020-02_Dawn_Landing_by_dg-505.jpg</image>
 			<caption>Dawn landing</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/Stemme_S6_over_Montserrat.jpg</image>
+			<image type="source" width="3512" height="1950">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/Stemme_S6_over_Montserrat.jpg</image>
 			<caption>Stemme S6 over Montserrat</caption>
 		</screenshot>
 		<screenshot>
-			<image type="source" width="1920" height="1080">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/master/screenshots/C-47_in_flight.jpg</image>
+			<image type="source" width="1920" height="1080">https://raw.githubusercontent.com/flathub/org.flightgear.FlightGear/RacerBG-cleanup/screenshots/C-47_in_flight.jpg</image>
 			<caption>C-47 in flight</caption>
 		</screenshot>
 	</screenshots>
