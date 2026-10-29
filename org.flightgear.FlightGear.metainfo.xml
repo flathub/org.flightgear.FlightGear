@@ -110,6 +110,15 @@
 	<content_rating type="oars-1.1">
 		<content_attribute id="social-chat">intense</content_attribute>
 	</content_rating>
+	<supports>
+		<control>keyboard</control>
+		<control>pointing</control>
+		<control>gamepad</control>
+	</supports>
+	<requires>
+		<display_length compare="ge">1024</display_length>
+		<internet>always</internet>
+	</requires>
 	<developer id="org.flightgear">
 		<name>The FlightGear Developers</name>
 	</developer>
