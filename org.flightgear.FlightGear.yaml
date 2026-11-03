@@ -15,10 +15,6 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --persist=.fgfs
-  # $FG_HOME is the place were FlightGear data is written to, contrary to $FG_ROOT, which is generally read-only.
-  # It is safe to store the built-in flightgear-data under /app, which is writable but non-persistent.
-  # The $FG_ROOT can still be changed by passing the "--fg-root" option when calling "flatpak run".
-  - --env=FG_ROOT=/app/share/flightgear
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -131,27 +127,13 @@ modules:
         url: https://gitlab.com/flightgear/simgear/-/archive/2024.1.7/simgear-2024.1.7.tar.bz2
         sha256: bd9f79bbc781a188fcaad893aba67beb45eaaa4ab92e8b0276b608be3f185e0b
 
-  - name: flightgear-data
-    buildsystem: simple
-    sources:
-      - type: archive
-        url: https://gitlab.com/flightgear/fgdata/-/archive/2024.1.7/fgdata-2024.1.7.tar.bz2
-        sha256: 198eccff637a8942213970243dc2d29d039fe1738c5e93a985513b6f679763b0
-        dest: fgdata
-    build-commands:
-      - mkdir --parents /app/share/flightgear
-      - mv fgdata/* /app/share/flightgear/
-
   - name: flightgear
     buildsystem: cmake-ninja
     config-opts:
       - -DENABLE_QT=ON
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
+      - -DCMAKE_BUILD_TYPE=Release
       - -DFG_BUILD_TYPE=Release
       - -DOpenGL_GL_PREFERENCE=GLVND
-      # Set the path to the base data, as it can not find the translations otherwise
-      - -DFG_DATA_DIR=/app/share/flightgear
-      # Let FlightGear build flite, because we know it will work
       - -DSYSTEM_FLITE=0
     builddir: true
     sources:
